@@ -11,7 +11,7 @@ class UserController {
       if (newUser.error) {
         return res.status(newUser.status).send(newUser.error);
       }
-      res.status(newUser.status).send(...newUser);
+      res.status(newUser.status).send(newUser);
     } catch (error) {
       res.status(status.SERVER_ERROR).send(error.message);
     }
@@ -22,7 +22,7 @@ class UserController {
       if (user.error) {
         return res.status(user.status).send(user.error);
       }
-      res.status(user.status).send(...user);
+      res.status(user.status).send(user);
     } catch (error) {
       res.status(status.SERVER_ERROR).send(error.message);
     }
@@ -34,7 +34,7 @@ class UserController {
       if (user.error) {
         return res.status(user.status).send(user.error);
       }
-      res.status(user.status).send(...user);
+      res.status(user.status).send(user);
     } catch (error) {
       res.status(status.SERVER_ERROR).send(error.message);
     }
@@ -46,7 +46,7 @@ class UserController {
       if (user.error) {
         return res.status(user.status).send(user.error);
       }
-      res.status(user.status).send(...user);
+      res.status(user.status).send(user);
     } catch (error) {
       res.status(status.SERVER_ERROR).send(error.message);
     }
@@ -58,7 +58,7 @@ class UserController {
       if (users.error) {
         return res.status(users.status).send(users.error);
       }
-      res.status(users.status).send(users.users);
+      res.status(users.status).send(users);
     } catch (error) {
       res.status(status.SERVER_ERROR).send(error.message);
     }

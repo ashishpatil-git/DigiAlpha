@@ -3,6 +3,10 @@ import pluginJs from "@eslint/js";
 
 
 export default [
-  {languageOptions: { globals: globals.node }},
-  pluginJs.configs.recommended,
+  {languageOptions: { globals: globals.node,
+    rules: {
+      'no-console': 'error'
+    },
+   }},
+  pluginJs.configs.recommended
 ];

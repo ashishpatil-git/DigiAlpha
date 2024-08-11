@@ -7,12 +7,11 @@ import mongoose from 'mongoose';
 const server = express();
 const PORT = process.env.PORT || 3000;
 const MONGO_URI = process.env.MONGO_URI;
-console.log(MONGO_URI);
 
 server.use(express.json());
 server.use('/api/users', userRoutes);
 
-mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(MONGO_URI)
   .then(() => {
     logger.info('Database Connected')
     server.listen(PORT, () => {

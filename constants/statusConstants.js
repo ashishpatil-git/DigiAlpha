@@ -1,7 +1,7 @@
 const status = {
     SUCCESS:200,
     SERVER_ERROR:500,
-    VALIDATION:412,
+    VALIDATION:400,
     NOCONTENT:204,
     CREATED:201,
     NOTFOUND:404,
